@@ -2,12 +2,13 @@
 - name: Create Nginx Server
   hosts: webserver
   tasks: 
-  - name: install nginx server
+  - name: add epel release
     yum:
       name: epel-release
       state: present
+  - name: install nginx server
     yum: 
-      name: nginx=1.18.0-0ubuntu1.2
+      name: nginx
       state: present
   - name: start nginx service
     service:
