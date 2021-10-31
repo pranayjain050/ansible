@@ -3,7 +3,10 @@
   hosts: webserver
   tasks: 
   - name: install nginx server
-    apt: 
+    yum:
+      name: epel-release
+      state: present
+    yum: 
       name: nginx=1.18.0-0ubuntu1.2
       state: present
   - name: start nginx service
