@@ -61,3 +61,7 @@
         state: started
         enabled: yes
       become: yes
+    - name: Creates directory
+      file:
+        path: /home/backend
+        state: directory
