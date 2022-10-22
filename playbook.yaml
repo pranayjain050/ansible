@@ -10,6 +10,11 @@
     yum: 
       name: nginx
       state: present
+  - name: install unzip
+    yum: 
+      name: unzip
+      state: present
+  
   - name: Insert Index Page
     template:
       src: index.html
